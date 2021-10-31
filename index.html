@@ -320,6 +320,156 @@
 
 
 
+
+        <box:page_detail>
+
+
+
+
+            <div class="post">
+
+                <div class="iconandtitle">
+                    <i class="ri-file-text-line"></i>
+                    <h1> <a href="(*page_link*)">(*page_title*)</a> </h1>
+                </div>
+
+
+
+
+                <div class="text-content">
+
+                    (*page_content*)
+
+                </div>
+
+
+
+
+                <check:if page_has_comments_section>
+
+                    <div class="comments-section-title">
+
+                        <a name="comments"></a>
+
+                        <a href="(*page_link*)#comment_form">نظرات ((*page_comment_count*))</a>
+
+                    </div>
+
+
+
+
+
+
+                    <box:page_comments>
+
+                        <div class="comments">
+
+
+                            <view:page_comments>
+
+                                <div class="one-comment">
+
+                                    <a name="comment-(*comment_id*)"></a>
+
+                                    <div class="avatar-and-name">
+
+
+                                        <img src="(*comment_avatar*)">
+                                        <h3><a href="(*comment_website*)">(*comment_fullname*) |</a></h3>
+                                        <h3><a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a></h3>
+
+
+                                    </div>
+
+                                    <div class="comment-body">
+
+                                        <span>(*comment_body*)</span>
+
+                                    </div>
+
+
+
+                                    <check:if comment_reply>
+
+
+                                        <div class="comment-reply">
+
+                                            <div class="comment-raply-avatar">
+
+                                                <img src="(*comment_reply_avatar*)">
+
+
+                                            </div>
+
+                                            <div class="comment-reply-body">
+
+                                                <span>(*comment_reply*)</span>
+
+
+                                            </div>
+
+
+                                        </div>
+
+                                    </check:if>
+
+
+
+
+
+                                </div>
+
+
+
+                            </view:page_comments>
+
+
+                        </div>
+                    </box:page_comments>
+
+
+
+
+
+
+
+
+                </check:if>
+
+
+
+                <check:if page_has_send_comment>
+
+                    <div class="comment-form">
+
+                        <a name="comment_form"></a>
+
+                        (*comment_add_form*)
+
+
+                    </div>
+
+
+
+                </check:if>
+
+
+            </div>
+
+
+
+
+
+
+
+        </box:page_detail>
+
+
+
+
+
+
+
         <div id="sidebar">
 
 
