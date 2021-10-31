@@ -63,8 +63,9 @@ h1 {
 }
 
 #title a,
-.sidebar a,
-.iconandtitle a {
+#sidebar a,
+.iconandtitle a,
+.likeanddis a {
     text-decoration: none;
 }
 
