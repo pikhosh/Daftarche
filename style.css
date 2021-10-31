@@ -1,0 +1,99 @@
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel.eot');
+    src: url('Sahel.eot?#iefix') format('embedded-opentype'), url('Sahel.woff2') format('woff2'), url('Sahel.woff') format('woff'), url('Sahel.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel-Bold.eot');
+    src: url('Sahel-Bold.eot?#iefix') format('embedded-opentype'), url('Sahel-Bold.woff2') format('woff2'), url('Sahel-Bold.woff') format('woff'), url('Sahel-Bold.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel-Light.eot');
+    src: url('Sahel-Light.eot?#iefix') format('embedded-opentype'), url('Sahel-Light.woff2') format('woff2'), url('Sahel-Light.woff') format('woff'), url('Sahel-Light.ttf') format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel-SemiBold.eot');
+    src: url('Sahel-SemiBold.eot?#iefix') format('embedded-opentype'), url('Sahel-SemiBold.woff2') format('woff2'), url('Sahel-SemiBold.woff') format('woff'), url('Sahel-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: Sahel;
+    src: url('Sahel-Black.eot');
+    src: url('Sahel-Black.eot?#iefix') format('embedded-opentype'), url('Sahel-Black.woff2') format('woff2'), url('Sahel-Black.woff') format('woff'), url('Sahel-Black.ttf') format('truetype');
+    font-weight: 900;
+}
+
+body {
+    background: #FFF2E4;
+    font-family: "Sahel";
+}
+
+body,
+a {
+    color: #6E6E6E;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: inherit;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-direction: row;
+    font-size: 16px;
+}
+
+h1 {
+    font-weight: 900;
+}
+
+#title a,
+.sidebar a,
+.iconandtitle a {
+    text-decoration: none;
+}
+
+.iconandtitle i {
+    font-size: 16px;
+}
+
+.iconandtitle {
+    display: flex;
+    align-items: center;
+}
+
+#ads {
+    display: flex;
+    flex-direction: column;
+}
+
+#description,
+#footer {
+    font-weight: 300;
+}
+
+#footer {
+    text-align: center;
+    font-size: 20px;
+}
+
+@media (min-width: 1200px) {
+    body {
+        background: #cc6a00;
+    }
+}

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+
+    <head:style></head:style>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <head:meta></head:meta>
+    <head:script></head:script>
+
+
+
+
+</head>
+
+
+<body>
+
+
+    <div id="header">
+
+        <h1 id="title">
+            <a href="(*blog_link*)">(*blog_title*)</a> .
+        </h1>
+        <h1 id="description">
+            <span> (*blog_short_description*)</span>
+        </h1>
+
+    </div>
+
+
+
+
+
+    <div id="main-box">
+
+        <div class="post_list">
+
+            <box:post_list>
+
+                <view:post_list>
+
+                    <div class="iconandtitle">
+                        <i class="ri-file-text-line"></i>
+                        <h1> <a href="(*post_link*)">(*post_title*)</a> </h1>
+                    </div>
+
+
+                    <div class="detail">
+
+                        <box:post_categories>
+                            <view:post_categories>
+                                <a href="(*category_link*)">(*category_name*)</a> ::
+                            </view:post_categories>
+                        </box:post_categories>
+
+                        نوشته شده در(*post_date*) توسط (*post_author*) |
+                        <a href="(*post_link*)#comments">(*post_comment_count*) نظر</a>
+
+                    </div>
+
+                    <div class="text-content">
+                        (*post_summary*)
+                    </div>
+
+                    <div class="read-more">
+                        <check:if post_has_read_more>
+                            <a href="(*post_link*)">ادامه مطلب</a>
+                        </check:if>
+                    </div>
+
+
+                </view:post_list>
+
+            </box:post_list>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="sidebar">
+
+            <div id="menu">
+                <box:menu>
+
+                    <ul>
+
+                        <view:menu>
+
+                            <li>
+                                <a href="(*menu_item_link*)">(*menu_item_title*)</a>
+                            </li>
+
+                        </view:menu>
+
+
+
+
+                    </ul>
+
+
+
+                </box:menu>
+            </div>
+
+
+
+
+            <div id="info">
+                <box:blog_info>
+                    (*search_form*)
+                    <check:if blog_description>
+                        (*blog_description*)
+                    </check:if>
+                </box:blog_info>
+            </div>
+
+            <div id="recent-posts">
+
+                <box:recent_posts>
+
+                    <h2>آخرین مطالب</h2>
+                    <ul>
+
+
+                        <view:recent_posts>
+
+                            <li>
+                                <a href="(*post_link*)">(*post_title*)</a>
+                            </li>
+
+                        </view:recent_posts>
+
+
+                    </ul>
+
+
+                </box:recent_posts>
+
+
+            </div>
+
+            <div id="categories">
+
+                <box:categories>
+
+                    <h2>دسته بندی مطالب</h2>
+
+                    <ul>
+
+
+                        <view:categories>
+
+                            <li>
+                                <a href="(*category_link*)">(*category_name*) ((*category_post_count*))</a>
+                            </li>
+
+                        </view:categories>
+
+
+                    </ul>
+
+
+
+                </box:categories>
+
+
+            </div>
+
+
+
+            <div id="stat">
+
+                <box:stat>
+
+                    <h2>خلاصه آمار</h2>
+
+                    <ul>
+
+
+                        <view:stat>
+
+                            <li>
+                                (*stat_title*): (*stat_value*)
+                            </li>
+
+                        </view:stat>
+
+
+                    </ul>
+
+
+
+                </box:stat>
+
+
+            </div>
+
+            <div id="ads">
+
+                <box:ads>
+
+                    <view:ads>
+
+                        (*ad*)
+
+                    </view:ads>
+
+                </box:ads>
+
+
+            </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="footer">
+
+        (*copyright_notice*) | طراح: <a href="https://pikhosh.blog.ir" target="blank">پیخوش</a>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
