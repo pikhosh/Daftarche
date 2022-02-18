@@ -296,6 +296,15 @@
                     <div class="post-page-content-section">
 
 
+                        <check:if post_image>
+                            <div class="thumbnail">
+
+                                <img src="(*post_image*)">
+
+
+                            </div>
+                        </check:if>
+
                         <div class="other-than-image">
                             <div class="post-icon">
 
@@ -306,14 +315,7 @@
 
                             <div class="other-than-icon">
 
-                                <check:if post_image>
-                                    <div class="thumbnail">
 
-                                        <img src="(*post_image*)">
-
-
-                                    </div>
-                                </check:if>
 
 
 
