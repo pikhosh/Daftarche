@@ -1,6 +1,8 @@
 # قالب وبلاگی دفترچه برای بیان بلاگ
 
-![image](https://user-images.githubusercontent.com/73311467/154629342-b5044712-6e06-4a24-8aaa-b05d70683bd7.png)
+![image](https://user-images.githubusercontent.com/73311467/154791394-ade77cf7-81c1-4103-95ae-3aa3922062d4.png)
+![image](https://user-images.githubusercontent.com/73311467/154791399-ff89d206-149f-47c4-b868-02425ddcd28b.png)
+
 
 در تلاش برای ساخت یه قالب خوشگل برای وبلاگ نویس های خوشگل! 😂👌
 
