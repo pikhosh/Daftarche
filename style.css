@@ -34,10 +34,19 @@
 }
 
 :root {
+    --Font: Sahel;
     --BorderRadius: 30px;
-    --WhiteBG: white;
+    --CommentFormBGColor: white;
     --MainBGColor: #FFF2E4;
     --MainBoxColor: #FFF8F8;
+    --SideBarColor: #FFF2E4;
+    --PostBoxColor: white;
+    --TextColor: #707070;
+    --MainBoxShadowColor: #707070;
+    --PaginationBGColor: #ffffff;
+    --CommentBGColor: white;
+    --SelectedBGColor: #faebd7;
+    --SideBarCommentAvatarSize: 35px;
     --SideBarTitleShodow: inset 0 3px 6px -5px;
     --MainBorderColor: #707070;
     --SideBorderColor: #70707033;
@@ -45,12 +54,12 @@
 
 body {
     background: var(--MainBGColor);
-    font-family: Sahel;
+    font-family: var(--Font);
 }
 
 body,
 a {
-    color: #707070;
+    color: var(--TextColor);
 }
 
 h1,
@@ -93,7 +102,7 @@ h1 {
 #main-box {
     background: var(--MainBoxColor);
     border-radius: 30px;
-    box-shadow: 0px 3px 99px -35px;
+    box-shadow: 0px 3px 99px -35px var(--MainBoxShadowColor);
     margin: 15px
 }
 
@@ -112,8 +121,55 @@ img:not(#ads img) {
     text-align: center;
 }
 
+#children-category {
+    margin-right: 10px;
+    font-style: italic;
+}
+
 
 /* Code For Modify Bayan.ir Default Styles*/
+
+.item_wrn,
+.item_err,
+.item_success {
+    margin: 15px 15px 0 15px;
+}
+
+.bComForm .commentAvatar {
+    padding: 0;
+}
+
+.bComForm .commentAvatar span {
+    margin: -19px 0 0;
+    border-radius: 0 0 12px 12px;
+    font-size: 12px;
+}
+
+.bComForm .commentAvatar img {
+    border: none;
+}
+
+input[type=button],
+input[type=text],
+input[type=password],
+input[type=submit],
+button,
+textarea,
+select,
+.inputBox,
+input.text,
+a.btn,
+a.btn:hover,
+a.btn:visited {
+    border-radius: 10px;
+}
+
+.search-box.dark .submit:hover,
+.search-box.dark .submit:focus,
+.search-box .submit:hover,
+.search-box .submit:focus {
+    cursor: pointer;
+}
 
 .followThis,
 .followThis.followed {
@@ -167,7 +223,7 @@ img:not(#ads img) {
 }
 
 .comment-form {
-    background: var(--WhiteBG);
+    background: var(--CommentFormBGColor);
     border-radius: var(--BorderRadius);
     padding: 10px;
 }
@@ -176,7 +232,7 @@ img:not(#ads img) {
 /*End*/
 
 .post-page-content-section {
-    background: white;
+    background: var(--PostBoxColor);
     border-radius: 30px;
     margin-bottom: 25px;
 }
@@ -203,7 +259,7 @@ img:not(#ads img) {
 }
 
 .one-comment {
-    background: white;
+    background: var(--CommentBGColor);
     border-radius: var(--BorderRadius);
     padding: 15px;
     margin-bottom: 30px;
@@ -240,8 +296,9 @@ img:not(#ads img) {
 }
 
 #sidebar {
-    background: #FFF2E4;
+    background: var(--SideBarColor);
     border-top: dashed 1px;
+    border-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2370707080' stroke-width='4' stroke-dasharray='9%2c 9' stroke-dashoffset='9' stroke-linecap='butt'/%3e%3c/svg%3e") 1 round;
     border-radius: 0 0 30px 30px;
     display: flex;
     flex-direction: column;
@@ -257,7 +314,7 @@ img:not(#ads img) {
     padding: 5px 0 5px 0;
 }
 
-#sidebar li:not(:last-of-type) {
+#sidebar li:not(:last-child) {
     border-bottom: dashed 1px;
     border-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2370707033' stroke-width='4' stroke-dasharray='5%2c 5' stroke-dashoffset='5' stroke-linecap='butt'/%3e%3c/svg%3e") 1 round;
 }
@@ -296,7 +353,7 @@ img:not(#ads img) {
 
 .pagination-button,
 #page-numbers a {
-    background-color: #ffffff;
+    background-color: var(--PaginationBGColor);
     border-radius: var(--BorderRadius);
     padding: 5px;
 }
@@ -312,7 +369,7 @@ img:not(#ads img) {
 textarea,
 input,
 select {
-    font-family: Sahel;
+    font-family: var(--Font);
 }
 
 #sidebar {
@@ -323,6 +380,93 @@ select {
     margin: 25px 0 25px 0;
     text-align: center;
 }
+
+
+/* Color Mode */
+
+@media (prefers-color-scheme: dark) {
+     :root {
+        --MainBGColor: #4D4944;
+        --MainBoxColor: #4D4A4A;
+        --SideBarColor: #4D4944;
+        --PostBoxColor: #4D4D4D;
+        --TextColor: #ffffffde;
+        --MainBoxShadowColor: #00000080;
+        --PaginationBGColor: #4D4D4D;
+        --SideBarTitleShodow: inset 0 3px 6px -5px #00000080;
+        --CommentBGColor: #4D4D4D;
+        --CommentFormBGColor: #4D4D4D;
+        --SelectedBGColor: #48433d;
+    }
+    .search-box.dark .submit,
+    .search-box.dark .submit:hover,
+    .search-box.dark .submit:focus {
+        background-color: unset;
+    }
+    .comment-form input {
+        color: var(--TextColor);
+    }
+    .search-box.dark {
+        border: unset;
+        background: unset;
+    }
+    .search-box.dark ::placeholder {
+        color: var(--TextColor);
+    }
+    .search-box .submit {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z' fill='rgba(255,255,255,0.8705882352941177)'/%3E%3C/svg%3E");
+    }
+}
+
+
+/* End of Color Mode */
+
+#rss-icon {
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+.first-and-last:not(:first-child) {
+    margin-right: 10px;
+}
+
+.first-and-last:not(:last-child) {
+    margin-left: 15px !important;
+}
+
+#menu .selected {
+    background-color: var(--SelectedBGColor);
+}
+
+#page-numbers .current {
+    background-color: var(--SelectedBGColor);
+}
+
+.sidebar-list .selected {
+    background-color: var(--SelectedBGColor);
+}
+
+#comment-profile img {
+    width: var(--SideBarCommentAvatarSize);
+}
+
+.detail,
+.likeanddis,
+#info :not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.read-more,
+.likeanddis {
+    margin-top: 15px;
+}
+
+.likeanddis i {
+    margin-left: 5px;
+}
+
+
+/* Desktop Version */
 
 @media (min-width: 1200px) {
     #main-box {

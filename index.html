@@ -8,6 +8,8 @@
 
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet" type="text/css">
+    <link rel="icon" type="image/png" href="https://bayanbox.ir/view/263351585038014583/Pashm.jpg">
+
 
     <head:meta></head:meta>
 
@@ -24,6 +26,17 @@
 
 
     <div id="header">
+
+        <check:if rss_link>
+
+            <a href="(*rss_link*)" id="rss-icon">
+                <i class="ri-rss-line"></i>
+
+            </a>
+
+
+        </check:if>
+
 
         <h1 id="title">
             <a href="(*blog_link*)">(*blog_title*)</a> . <span id="description">(*blog_short_description*)</span>
@@ -55,11 +68,24 @@
 
         <div id="content-section">
 
+            <box:messages>
+
+                <view:messages>
+
+                    <div class="item_(*message_type*)">
+                        <div class="icon"></div>
+                        (*message*)
+                    </div>
+                </view:messages>
+            </box:messages>
+
             <box:post_list>
 
 
 
                 <div class="post-page">
+
+
 
                     <check:if post_list_title>
 
@@ -233,6 +259,19 @@
 
                 <div id="pagination-section">
 
+                    <check:if page_first>
+
+                        <div class="pagination-button first-and-last">
+
+                            <a href="(*page_first*)">
+                                صفحه اول
+                            </a>
+                        </div>
+
+                    </check:if>
+
+
+
                     <check:if page_prev>
 
 
@@ -253,11 +292,11 @@
                     <div id="page-numbers">
 
                         <view:pages spec="3,2,2,2,3,2">
-                            <a href="(*page_link*)">
+                            <a href="(*page_link*)" class="(*page_current*)">
 
-                        (*page_num*)
+                                (*page_num*)
 
-                    </a>
+                            </a>
                         </view:pages>
 
                     </div>
@@ -280,6 +319,18 @@
                         </div>
 
                     </check:if page_next>
+
+                    <check:if page_last>
+                        <div class="pagination-button first-and-last">
+
+                            <a href="(*page_last*)">
+                                صفحه آخر
+                            </a>
+                        </div>
+
+                    </check:if>
+
+
                 </div>
 
 
@@ -551,7 +602,7 @@
 
 
                                             <img src="(*comment_avatar*)">
-                                            <h3><a href="(*comment_website*)">(*comment_fullname*)</a> | <a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a>
+                                            <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> | <a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a>
                                             </h3>
 
 
@@ -714,7 +765,7 @@
 
 
                                             <img src="(*comment_avatar*)">
-                                            <h3><a href="(*comment_website*)">(*comment_fullname*)</a> |</h3>
+                                            <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> |</h3>
                                             <h3><a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a></h3>
 
 
@@ -823,7 +874,7 @@
 
                         <view:menu>
 
-                            <li>
+                            <li class="(*menu_item_selected*)">
                                 <a href="(*menu_item_link*)">(*menu_item_title*)</a>
                             </li>
 
@@ -914,12 +965,12 @@
                                 <a href="(*post_link*)">(*post_title*)
                                         
                                         <box:post_rating>
-                                            ((*up_rates*) رای)
+                                            <b>((*up_rates*) رای)</b>
                                         </box:post_rating>
                                         
                                         <check:if not post_rating>
                                             
-                                            (بدون رای گیری)
+                                            <b>(بدون رای گیری)</b>
                                             
                                             
                                         </check:if>
@@ -955,7 +1006,7 @@
                                         
                                         <check:if post_has_comments_section>
                                             
-                                            ((*post_comment_count*) نظر)										
+                                            <b>((*post_comment_count*) نظر)		</b>								
                                             
                                         </check:if>
                                         
@@ -963,7 +1014,7 @@
                                         
                                         <check:if not post_has_comments_section>
                                             
-                                            (فاقد نظرات عمومی)
+                                            <b>(فاقد نظرات عمومی)</b>
                                             
                                             
                                         </check:if>
@@ -997,7 +1048,7 @@
                         <view:most_visited_posts>
 
                             <li>
-                                <a href="(*post_link*)">(*post_title*) ((*post_visits*) بازدید)</a>
+                                <a href="(*post_link*)">(*post_title*) <b>((*post_visits*) بازدید)</b></a>
                             </li>
 
                         </view:most_visited_posts>
@@ -1024,8 +1075,8 @@
 
                         <view:recent_comments>
 
-                            <li>
-                                <a href="(*comment_link*)">(*comment_body_text max="35"*)</a>
+                            <li id="comment-profile">
+                                <a href="(*comment_link*)"> <img src="(*comment_avatar*)"> (*comment_body_text max="35"*)</a>
                             </li>
 
                         </view:recent_comments>
@@ -1054,7 +1105,7 @@
 
                         <view:authors>
 
-                            <li>
+                            <li class="(*author_selected*)">
                                 <a href="(*author_link*)">(*author_name*) ((*author_post_count*))</a>
                             </li>
 
@@ -1092,21 +1143,16 @@
 
                         <view:categories>
 
-                            <li>
+                            <li class="(*category_selected*)">
                                 <a href="(*category_link*)">(*category_name*) ((*category_post_count*))</a>
                             </li>
 
                             <check:if category_children>
-
-                                <view:category_children>
-
-
-                                    <li id="children-category">
-                                        <a href="(*category_link*)">(*category_name*) ((*category_post_count*))</a>
-                                    </li>
+                                <ul id="children-category">
+                                    <view:category_children></view:category_children>
 
 
-                                </view:category_children>
+                                </ul>
 
 
 
@@ -1141,7 +1187,7 @@
 
                         <view:archive>
 
-                            <li>
+                            <li class="(*archive_selected*)">
                                 <a href="(*link_url*)">(*link_name*) ((*link_count*))</a>
                             </li>
 
@@ -1173,7 +1219,7 @@
 
                         <view:tag_cloud>
 
-                            <li style="font-size:(*tag_size*)%">
+                            <li style="font-size:(*tag_size*)%" class="(*tag_selected*)">
                                 <a href="(*tag_link*)">(*tag_name*) ((*tag_post_count*))</a>
                             </li>
 
@@ -1203,7 +1249,7 @@
                         <view:links>
 
                             <li>
-                                <a href="(*link_url*)" alt="(*link_alt*)">(*link_name*)</a>
+                                <a href="(*link_url*)" alt="(*link_alt*)" target="_blank">(*link_name*)</a>
                             </li>
 
                         </view:links>
@@ -1233,7 +1279,7 @@
                         <view:daily_links>
 
                             <li>
-                                <a href="(*link_url*)" alt="(*link_alt*)">(*link_name*)</a>
+                                <a href="(*link_url*)" alt="(*link_alt*)" target="_blank">(*link_name*)</a>
                             </li>
 
                         </view:daily_links>
