@@ -130,7 +130,8 @@ img:not(#ads img) {
 
 /* Code For Modify Bayan.ir Default Styles*/
 
-.bComForm .sendbutton.hasCheckbox {
+.bComForm .sendbutton.hasCheckbox,
+.bComForm .sendbutton {
     margin: 5px 40% 10px 40%;
     padding: 5px 0;
     width: -webkit-fill-available;
