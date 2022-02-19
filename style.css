@@ -137,6 +137,11 @@ img:not(#ads img) {
     width: -webkit-fill-available;
 }
 
+input[type=submit] {
+    background: var(--MainBoxColor);
+    color: var(--TextColor);
+}
+
 .bComForm .sendbutton.hasCheckbox:hover,
 select,
 input[type=submit]:hover {
