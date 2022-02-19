@@ -137,7 +137,8 @@ img:not(#ads img) {
 }
 
 .bComForm .sendbutton.hasCheckbox:hover,
-select {
+select,
+input[type=submit]:hover {
     cursor: pointer;
 }
 
@@ -147,7 +148,8 @@ select {
 
 textarea:focus-visible,
 select:focus-visible,
-.inputFix input:focus-visible {
+.inputFix input:focus-visible,
+input[type=password]:focus-visible {
     outline: var(--CommentFormFocusOutlineColor) solid 3px;
 }
 
