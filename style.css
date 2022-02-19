@@ -46,6 +46,7 @@
     --PaginationBGColor: #ffffff;
     --CommentBGColor: white;
     --SelectedBGColor: #faebd7;
+    --CommentFormFocusOutlineColor: #ededed;
     --SideBarCommentAvatarSize: 35px;
     --SideBarTitleShodow: inset 0 3px 6px -5px;
     --MainBorderColor: #707070;
@@ -129,6 +130,27 @@ img:not(#ads img) {
 
 /* Code For Modify Bayan.ir Default Styles*/
 
+.bComForm .sendbutton.hasCheckbox {
+    margin: 5px 40% 10px 40%;
+    padding: 5px 0;
+    width: -webkit-fill-available;
+}
+
+.bComForm .sendbutton.hasCheckbox:hover,
+select {
+    cursor: pointer;
+}
+
+.formField2 label {
+    cursor: text;
+}
+
+textarea:focus-visible,
+select:focus-visible,
+.inputFix input:focus-visible {
+    outline: var(--CommentFormFocusOutlineColor) solid 3px;
+}
+
 .item_wrn,
 .item_err,
 .item_success {
@@ -205,11 +227,11 @@ a.btn:visited {
 }
 
 .formField2 .fldcontent {
-    margin-right: 55px;
+    margin-right: 8em;
 }
 
 .formField2 label {
-    width: 47px;
+    width: 7em;
 }
 
 .comment-form input {
@@ -393,6 +415,7 @@ select {
         --CommentBGColor: #4D4D4D;
         --CommentFormBGColor: #4D4D4D;
         --SelectedBGColor: #48433d;
+        --CommentFormFocusOutlineColor: #606060;
     }
     .search-box.dark .submit,
     .search-box.dark .submit:hover,
