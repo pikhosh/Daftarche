@@ -34,7 +34,7 @@
 }
 
 :root {
-    --Font: Sahel;
+    --Font: Sahel, sans-serif;
     --BorderRadius: 30px;
     --CommentFormBGColor: white;
     --MainBGColor: #FFF2E4;
