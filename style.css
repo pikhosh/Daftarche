@@ -135,6 +135,7 @@ img:not(#ads img) {
     margin: 5px 40% 10px 40%;
     padding: 5px 0;
     width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 input[type=submit] {
@@ -303,6 +304,7 @@ a.btn:visited {
     border-radius: var(--BorderRadius);
     padding: 15px;
     width: -webkit-fill-available;
+    width: -moz-available;
 }
 
 .comment-reply {
@@ -522,5 +524,6 @@ select {
     }
     #content-section {
         width: -webkit-fill-available;
+        width: -moz-available;
     }
 }
