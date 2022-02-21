@@ -33,6 +33,25 @@
     font-weight: 900;
 }
 
+@font-face {
+    font-family: Vazir Code;
+    src: url('Vazir-Code.eot');
+    src: url('Vazir-Code.eot?#iefix') format('embedded-opentype'), url('Vazir-Code.woff') format('woff'), url('Vazir-Code.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Vazir Code Hack;
+    src: url('Vazir-Code-Hack.eot');
+    src: url('Vazir-Code-Hack.eot?#iefix') format('embedded-opentype'), url('Vazir-Code-Hack.woff') format('woff'), url('Vazir-Code-Hack.ttf') format('truetype');
+    font-weight: normal;
+}
+
+pre,
+code {
+    font-family: 'Vazir Code', 'Vazir Code Hack', monospaced;
+}
+
 :root {
     --Font: Sahel, sans-serif;
     --BorderRadius: 30px;
@@ -129,6 +148,16 @@ img:not(#ads img) {
 
 
 /* Code For Modify Bayan.ir Default Styles*/
+
+pre.prettyprint {
+    border: none;
+    border-radius: var(--BorderRadius);
+    padding: 5px;
+}
+
+pre {
+    background-color: var(--MainBoxColor);
+}
 
 .bComForm .sendbutton.hasCheckbox,
 .bComForm .sendbutton {
@@ -426,6 +455,9 @@ select {
         --CommentFormBGColor: #4D4D4D;
         --SelectedBGColor: #48433d;
         --CommentFormFocusOutlineColor: #606060;
+    }
+    .prettyprint>span {
+        filter: invert(1);
     }
     .search-box.dark .submit,
     .search-box.dark .submit:hover,
