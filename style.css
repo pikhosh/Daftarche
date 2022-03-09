@@ -265,6 +265,10 @@ a.btn:visited {
     text-decoration: revert;
 }
 
+#followInBx.dark {
+    color: var(--TextColor);
+}
+
 .formField2 .fldcontent {
     margin-right: 8em;
 }
