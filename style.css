@@ -231,7 +231,7 @@ a.btn:visited {
 .followThis,
 .followThis.followed {
     background: none;
-    color: inherit !important;
+    color: var(--TextColor) !important;
 }
 
 #info input,
