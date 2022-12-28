@@ -3,80 +3,45 @@
 
 <head>
 
-
     <head:style>
-        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-code-font@v1.1.2/dist/font-face.css" rel="stylesheet" type="text/css" />
+        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-code-font@v1.1.2/dist/font-face.css" rel="stylesheet"
+            type="text/css" />
+
         <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet" type="text/css">
+
+        <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet"
+            type="text/css">
+
         <link rel="icon" type="image/png" href="(*blog_image*)">
     </head:style>
-
-
-
 
     <head:meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head:meta>
 
-
-
     <head:script></head:script>
-
-
 
 </head>
 
-
 <body>
 
-
     <div id="header">
-
         <check:if rss_link>
-
             <a href="(*rss_link*)" id="rss-icon" title="آر اس اس وبلاگ">
                 <i class="ri-rss-line"></i>
-
             </a>
-
-
         </check:if>
-
-
         <h1 id="title">
             <a href="(*blog_link*)">(*blog_title*)</a> . <span id="description">(*blog_short_description*)</span>
         </h1>
-
-
     </div>
 
-
-
-
-
-
     <div id="main-box">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         <div id="content-section">
 
             <box:messages>
-
                 <view:messages>
-
                     <div class="item_(*message_type*)">
                         <div class="icon"></div>
                         (*message*)
@@ -85,1291 +50,529 @@
             </box:messages>
 
             <box:post_list>
-
-
-
                 <div class="post-page">
-
-
-
                     <check:if post_list_title>
-
                         <div id="post-list-title">
-
                             (*post_list_title*).
-
                         </div>
-
-
                     </check:if>
-
                     <view:post_list>
-
                         <div class="post-page-content-section">
-
                             <check:if post_image>
                                 <div class="thumbnail">
-
                                     <img src="(*post_image*)">
-
-
                                 </div>
                             </check:if>
-
                             <div class="other-than-image">
-
                                 <div class="post-icon">
                                     <i class="ri-file-text-line"></i>
-
                                 </div>
-
                                 <div class="other-than-icon">
                                     <div class="iconandtitle">
                                         <h1> <a href="(*post_link*)">(*post_title*)</a> </h1>
                                     </div>
-
-
                                     <div class="detail">
-
                                         <box:post_categories>
                                             <view:post_categories>
                                                 <a href="(*category_link*)">[(*category_name*)]</a>
                                             </view:post_categories>
-
                                             |
                                         </box:post_categories>
-
-
-
-
-
                                         <check:if post_date>
                                             نوشته شده در (*post_date*)
-
                                             <check:if post_author>
                                                 توسط (*post_author*)
                                             </check:if>
                                         </check:if>
-
-
                                         <check:if not post_date>
                                             <check:if post_author>
                                                 نوشته شده توسط (*post_author*)
                                             </check:if>
-
                                             <check:if not post_author>
                                                 مطلب
                                             </check:if>
                                         </check:if>
-
-
-
-
-
                                         <check:if post_has_comments_section>
                                             | <a href="(*post_link*)#comments">(*post_comment_count*) نظر</a>
-
-
-
-
                                             <check:if not post_has_send_comment>
-
                                                 - عدم ثبت نظر جدید
-
                                             </check:if>
-
-
                                         </check:if>
-
-
-
-
-
                                         <check:if not post_has_comments_section>
-
                                             <check:if post_has_send_comment>
-
                                                 | <a href="(*post_link*)#comment_form">نظرات فقط خصوصی</a>
-
-
                                             </check:if>
-
                                             <check:if not post_has_send_comment>
-
                                                 | فاقد بخش نظرات
-
                                             </check:if>
-
-
                                         </check:if>
-
-
-
-
-
                                         <box:post_flags>
-
-
                                             |
                                             <view:post_flags>
-
                                                 <a href="(*flag_link*)">((*flag_name*))</a>
-
                                             </view:post_flags>
-
-
-
-
                                         </box:post_flags>
-
-
-
-
-
-
-
-
                                     </div>
-
                                     <div class="text-content">
                                         (*post_summary*)
                                     </div>
-
-
                                     <check:if post_has_read_more>
                                         <div class="read-more">
                                             <a href="(*post_link*)">ادامه مطلب</a>
                                         </div>
                                     </check:if>
-
                                 </div>
-
                             </div>
-
-
                     </view:post_list>
-
-                    </div>
-
-
-
                 </div>
+        </div>
 
+        </box:post_list>
 
-
-            </box:post_list>
-
-            <box:pagination>
-
-
-                <div id="pagination-section">
-
-                    <check:if page_first>
-
-                        <div class="pagination-button first-and-last">
-
-                            <a href="(*page_first*)">
-                                صفحه اول
-                            </a>
-                        </div>
-
-                    </check:if>
-
-
-
-                    <check:if page_prev>
-
-
-                        <div class="pagination-button">
-
-                            <a href="(*page_prev*)">
-
-                                صفحه قبلی
-
-                            </a>
-
-
-
-                        </div>
-
-                    </check:if page_prev>
-
-                    <div id="page-numbers">
-
-                        <view:pages spec="3,2,2,2,3,2">
-                            <a href="(*page_link*)" class="(*page_current*)">
-
-                                (*page_num*)
-
-                            </a>
-                        </view:pages>
-
+        <box:pagination>
+            <div id="pagination-section">
+                <check:if page_first>
+                    <div class="pagination-button first-and-last">
+                        <a href="(*page_first*)">
+                            صفحه اول
+                        </a>
                     </div>
-
-
-
-                    <check:if page_next>
-
-
-
-                        <div class="pagination-button">
-
-                            <a href="(*page_next*)">
-
-                                صفحه بعدی
-
-                            </a>
-
-
-                        </div>
-
-                    </check:if page_next>
-
-                    <check:if page_last>
-                        <div class="pagination-button first-and-last">
-
-                            <a href="(*page_last*)">
-                                صفحه آخر
-                            </a>
-                        </div>
-
-                    </check:if>
-
-
+                </check:if>
+                <check:if page_prev>
+                    <div class="pagination-button">
+                        <a href="(*page_prev*)">
+                            صفحه قبلی
+                        </a>
+                    </div>
+                </check:if page_prev>
+                <div id="page-numbers">
+                    <view:pages spec="3,2,2,2,3,2">
+                        <a href="(*page_link*)" class="(*page_current*)">
+                            (*page_num*)
+                        </a>
+                    </view:pages>
                 </div>
+                <check:if page_next>
+                    <div class="pagination-button">
+                        <a href="(*page_next*)">
+                            صفحه بعدی
+                        </a>
+                    </div>
+                </check:if page_next>
+                <check:if page_last>
+                    <div class="pagination-button first-and-last">
+                        <a href="(*page_last*)">
+                            صفحه آخر
+                        </a>
+                    </div>
+                </check:if>
+            </div>
+        </box:pagination>
 
-
-
-
-            </box:pagination>
-
-            <box:post_detail>
-
-                <div class="post-page">
-
-
-
-                    <div class="post-page-content-section">
-
-
-                        <check:if post_image>
-                            <div class="thumbnail">
-
-                                <img src="(*post_image*)">
-
-
+        <box:post_detail>
+            <div class="post-page">
+                <div class="post-page-content-section">
+                    <check:if post_image>
+                        <div class="thumbnail">
+                            <img src="(*post_image*)">
+                        </div>
+                    </check:if>
+                    <div class="other-than-image">
+                        <div class="post-icon">
+                            <i class="ri-file-text-line"></i>
+                        </div>
+                        <div class="other-than-icon">
+                            <div class="iconandtitle">
+                                <h1> <a href="(*post_link*)">(*post_title*)</a> </h1>
                             </div>
-                        </check:if>
-
-                        <div class="other-than-image">
-                            <div class="post-icon">
-
-                                <i class="ri-file-text-line"></i>
-                            </div>
-
-
-
-                            <div class="other-than-icon">
-
-
-
-
-
-                                <div class="iconandtitle">
-
-                                    <h1> <a href="(*post_link*)">(*post_title*)</a> </h1>
-                                </div>
-
-
-                                <div class="detail">
-
-                                    <box:post_categories>
-                                        <view:post_categories>
-                                            <a href="(*category_link*)">[(*category_name*)]</a>
-                                        </view:post_categories>
-
-                                        |
-                                    </box:post_categories>
-
-
-
-
-
-                                    <check:if post_date>
-                                        نوشته شده در (*post_date*)
-
-                                        <check:if post_author>
-                                            توسط (*post_author*)
-                                        </check:if>
+                            <div class="detail">
+                                <box:post_categories>
+                                    <view:post_categories>
+                                        <a href="(*category_link*)">[(*category_name*)]</a>
+                                    </view:post_categories>
+                                    |
+                                </box:post_categories>
+                                <check:if post_date>
+                                    نوشته شده در (*post_date*)
+                                    <check:if post_author>
+                                        توسط (*post_author*)
                                     </check:if>
-
-
-                                    <check:if not post_date>
-                                        <check:if post_author>
-                                            نوشته شده توسط (*post_author*)
-                                        </check:if>
-
-                                        <check:if not post_author>
-                                            مطلب
-                                        </check:if>
-                                    </check:if>
-
-
-
-
-                                    <check:if post_has_comments_section>
-                                        | <a href="(*post_link*)#comments">(*post_comment_count*) نظر</a>
-
-
-
-
-                                        <check:if not post_has_send_comment>
-
-                                            - عدم ثبت نظر جدید
-
-                                        </check:if>
-
-
-                                    </check:if>
-
-
-
-
-
-                                    <check:if not post_has_comments_section>
-
-                                        <check:if post_has_send_comment>
-
-                                            | <a href="(*post_link*)#comment_form">نظرات فقط خصوصی</a>
-
-
-                                        </check:if>
-
-                                        <check:if not post_has_send_comment>
-
-                                            | فاقد بخش نظرات
-
-                                        </check:if>
-
-
-                                    </check:if>
-
-
-
-
-
-                                    <box:post_flags>
-
-
-                                        |
-                                        <view:post_flags>
-
-                                            <a href="(*flag_link*)">((*flag_name*))</a>
-
-                                        </view:post_flags>
-
-
-
-
-                                    </box:post_flags>
-
-
-
-
-
-
-
-
-                                </div>
-
-
-                                <div class="text-content">
-
-                                    (*post_full_content*)
-
-                                </div>
-
-
-
-
-
-
-
-
-                                <check:if post_rating>
-
-
-
-
-                                    <box:post_rating>
-
-                                        <div class="likeanddis">
-
-
-
-
-                                            <check:if user_rated_down>
-
-                                                (*down_rates*)<a href="(*rate_down_link*)"><i class="ri-thumb-down-fill"></i></a>
-
-                                            </check:if>
-
-                                            <check:if not user_rated_down>
-
-                                                (*down_rates*)<a href="(*rate_down_link*)"><i class="ri-thumb-down-line"></i></a>
-
-                                            </check:if>
-
-
-
-
-                                            <check:if user_rated_up>
-
-                                                (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-fill"></i></a>
-
-                                            </check:if>
-
-                                            <check:if not user_rated_up>
-
-                                                (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-line"></i></a>
-
-                                            </check:if>
-
-                                        </div>
-
-
-                                    </box:post_rating>
-
-
                                 </check:if>
-
-
-
-
-
-
-
-
-                                <box:post_tags>
-                                    <div class="post_tags">
-
-                                        <view:post_tags>
-
-
-                                            <a href="(*tag_link*)">#(*tag_name*)</a>
-
-
-                                        </view:post_tags>
+                                <check:if not post_date>
+                                    <check:if post_author>
+                                        نوشته شده توسط (*post_author*)
+                                    </check:if>
+                                    <check:if not post_author>
+                                        مطلب
+                                    </check:if>
+                                </check:if>
+                                <check:if post_has_comments_section>
+                                    | <a href="(*post_link*)#comments">(*post_comment_count*) نظر</a>
+                                    <check:if not post_has_send_comment>
+                                        - عدم ثبت نظر جدید
+                                    </check:if>
+                                </check:if>
+                                <check:if not post_has_comments_section>
+                                    <check:if post_has_send_comment>
+                                        | <a href="(*post_link*)#comment_form">نظرات فقط خصوصی</a>
+                                    </check:if>
+                                    <check:if not post_has_send_comment>
+                                        | فاقد بخش نظرات
+                                    </check:if>
+                                </check:if>
+                                <box:post_flags>
+                                    |
+                                    <view:post_flags>
+                                        <a href="(*flag_link*)">((*flag_name*))</a>
+                                    </view:post_flags>
+                                </box:post_flags>
+                            </div>
+                            <div class="text-content">
+                                (*post_full_content*)
+                            </div>
+                            <check:if post_rating>
+                                <box:post_rating>
+                                    <div class="likeanddis">
+                                        <check:if user_rated_down>
+                                            (*down_rates*)<a href="(*rate_down_link*)"><i
+                                                    class="ri-thumb-down-fill"></i></a>
+                                        </check:if>
+                                        <check:if not user_rated_down>
+                                            (*down_rates*)<a href="(*rate_down_link*)"><i
+                                                    class="ri-thumb-down-line"></i></a>
+                                        </check:if>
+                                        <check:if user_rated_up>
+                                            (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-fill"></i></a>
+                                        </check:if>
+                                        <check:if not user_rated_up>
+                                            (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-line"></i></a>
+                                        </check:if>
                                     </div>
-
-                                </box:post_tags>
-
-
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-
-
-                    <check:if post_has_comments_section>
-
-                        <div class="comments-section-title">
-
-                            <a name="comments"></a>
-
-                            <a href="(*post_link*)#comment_form">نظرات ((*post_comment_count*))</a>
-
-                        </div>
-
-
-
-
-
-
-                        <box:post_comments>
-                            <div class="comments">
-
-
-                                <view:post_comments>
-
-                                    <div class="one-comment">
-
-                                        <a name="comment-(*comment_id*)"></a>
-
-                                        <div class="avatar-and-name">
-
-
-                                            <img src="(*comment_avatar*)">
-                                            <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> | <a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a>
-                                            </h3>
-
-
-                                        </div>
-
-                                        <div class="comment-body">
-
-                                            <span>(*comment_body*)</span>
-
-                                        </div>
-
-
-
-                                        <check:if comment_reply>
-
-
-                                            <div class="comment-reply">
-
-                                                <div class="comment-raply-avatar">
-
-                                                    <img src="(*comment_reply_avatar*)">
-
-
-                                                </div>
-
-                                                <div class="comment-reply-body">
-
-                                                    <span>(*comment_reply*)</span>
-
-
-                                                </div>
-
-
-                                            </div>
-
-                                        </check:if>
-
-
-
-
-
-                                    </div>
-
-
-
-                                </view:post_comments>
-
-                            </div>
-
-                        </box:post_comments>
-
-
-
-
-
-
-
-
-
-                    </check:if>
-
-
-                    <check:if post_has_send_comment>
-
-                        <div class="comment-form">
-
-                            <a name="comment_form"></a>
-
-                            (*comment_add_form*)
-
-
-                        </div>
-
-
-
-                    </check:if>
-
-
-                </div>
-
-            </box:post_detail>
-
-
-
-
-
-
-
-            <box:page_detail>
-
-
-
-
-                <div class="post-page">
-
-
-                    <div class="post-page-content-section">
-
-                        <div class="other-than-image">
-
-
-
-                            <div class="post-icon">
-                                <i class="ri-file-text-line"></i>
-
-                            </div>
-
-
-                            <div class="other-than-icon">
-                                <div class="iconandtitle">
-                                    <h1> <a href="(*page_link*)">(*page_title*)</a> </h1>
-                                </div>
-
-
-
-
-                                <div class="text-content">
-
-                                    (*page_content*)
-
-                                </div>
-
-                            </div>
-
-                        </div>
-
-
-                    </div>
-
-
-
-
-                    <check:if page_has_comments_section>
-
-                        <div class="comments-section-title">
-
-                            <a name="comments"></a>
-
-                            <a href="(*page_link*)#comment_form">نظرات ((*page_comment_count*))</a>
-
-                        </div>
-
-
-
-
-
-
-                        <box:page_comments>
-
-                            <div class="comments">
-
-
-                                <view:page_comments>
-
-                                    <div class="one-comment">
-
-                                        <a name="comment-(*comment_id*)"></a>
-
-                                        <div class="avatar-and-name">
-
-
-                                            <img src="(*comment_avatar*)">
-                                            <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> |</h3>
-                                            <h3><a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M %p"*)</a></h3>
-
-
-                                        </div>
-
-                                        <div class="comment-body">
-
-                                            <span>(*comment_body*)</span>
-
-                                        </div>
-
-
-
-                                        <check:if comment_reply>
-
-
-                                            <div class="comment-reply">
-
-                                                <div class="comment-raply-avatar">
-
-                                                    <img src="(*comment_reply_avatar*)">
-
-
-                                                </div>
-
-                                                <div class="comment-reply-body">
-
-                                                    <span>(*comment_reply*)</span>
-
-
-                                                </div>
-
-
-                                            </div>
-
-                                        </check:if>
-
-
-
-
-
-                                    </div>
-
-
-
-                                </view:page_comments>
-
-
-                            </div>
-                        </box:page_comments>
-
-
-
-
-
-
-
-
-                    </check:if>
-
-
-
-                    <check:if page_has_send_comment>
-
-                        <div class="comment-form">
-
-                            <a name="comment_form"></a>
-
-                            (*comment_add_form*)
-
-
-                        </div>
-
-
-
-                    </check:if>
-
-
-                </div>
-
-
-
-
-
-
-
-            </box:page_detail>
-
-        </div>
-
-
-
-
-
-
-
-
-        <div id="sidebar">
-
-
-            <box:menu>
-
-                <div id="menu">
-
-                    <ul>
-
-                        <view:menu>
-
-                            <li class="(*menu_item_selected*)">
-                                <a href="(*menu_item_link*)">(*menu_item_title*)</a>
-                            </li>
-
-                        </view:menu>
-
-
-
-
-                    </ul>
-
-
-                </div>
-            </box:menu>
-
-
-
-
-
-
-            <box:blog_info>
-
-                <div id="info">
-                    (*search_form*)
-
-                    <check:if blog_image>
-
-                        <div id="blog-image">
-
-                            <img src="(*blog_image*)">
-
-                        </div>
-
-                    </check:if>
-
-
-
-                    <check:if blog_description>
-
-                        <div id="blog-descripstion">
-                            (*blog_description*)
-
-                        </div>
-                    </check:if>
-                    (*follow_box*)
-
-                </div>
-            </box:blog_info>
-
-
-
-
-            <box:recent_posts>
-
-                <div class="sidebar-list">
-
-                    <h2>آخرین مطالب</h2>
-                    <ul>
-
-
-                        <view:recent_posts>
-
-                            <li>
-                                <a href="(*post_link*)">(*post_title*)</a>
-                            </li>
-
-                        </view:recent_posts>
-
-
-                    </ul>
-
-                </div>
-            </box:recent_posts>
-
-
-
-
-
-            <box:popular_posts>
-
-                <div class="sidebar-list">
-
-                    <h2>مطالب محبوب</h2>
-                    <ul>
-
-
-                        <view:popular_posts>
-
-                            <li>
-                                <a href="(*post_link*)">(*post_title*)
-                                        
-                                        <box:post_rating>
-                                            <b>((*up_rates*) رای)</b>
-                                        </box:post_rating>
-                                        
-                                        <check:if not post_rating>
-                                            
-                                            <b>(بدون رای گیری)</b>
-                                            
-                                            
-                                        </check:if>
-                                        
-                                        
-                                    </a>
-                            </li>
-
-                        </view:popular_posts>
-
-
-                    </ul>
-
-                </div>
-            </box:popular_posts>
-
-
-
-
-
-            <box:most_commented_posts>
-
-                <div class="sidebar-list">
-
-                    <h2>مطالب پر بحث</h2>
-                    <ul>
-
-
-                        <view:most_commented_posts>
-
-                            <li>
-                                <a href="(*post_link*)">(*post_title*)
-                                        
-                                        <check:if post_has_comments_section>
-                                            
-                                            <b>((*post_comment_count*) نظر)		</b>								
-                                            
-                                        </check:if>
-                                        
-                                        
-                                        
-                                        <check:if not post_has_comments_section>
-                                            
-                                            <b>(فاقد نظرات عمومی)</b>
-                                            
-                                            
-                                        </check:if>
-                                        
-                                        
-                                    </a>
-                            </li>
-
-                        </view:most_commented_posts>
-
-
-                    </ul>
-
-                </div>
-            </box:most_commented_posts>
-
-
-
-
-
-
-
-            <box:most_visited_posts>
-
-                <div class="sidebar-list">
-
-                    <h2>مطالب پر بازدید</h2>
-                    <ul>
-
-
-                        <view:most_visited_posts>
-
-                            <li>
-                                <a href="(*post_link*)">(*post_title*) <b>((*post_visits*) بازدید)</b></a>
-                            </li>
-
-                        </view:most_visited_posts>
-
-
-                    </ul>
-
-                </div>
-            </box:most_visited_posts>
-
-
-
-
-
-
-
-            <box:recent_comments>
-
-                <div class="sidebar-list">
-
-                    <h2>نظرات اخیر</h2>
-                    <ul>
-
-
-                        <view:recent_comments>
-
-                            <li id="comment-profile">
-                                <a href="(*comment_link*)"> <img src="(*comment_avatar*)"> (*comment_body_text max="35"*)</a>
-                            </li>
-
-                        </view:recent_comments>
-
-
-                    </ul>
-
-                </div>
-            </box:recent_comments>
-
-
-
-
-
-
-
-
-
-            <box:authors>
-
-                <div class="sidebar-list">
-
-                    <h2>نویسندگان</h2>
-                    <ul>
-
-
-                        <view:authors>
-
-                            <li class="(*author_selected*)">
-                                <a href="(*author_link*)">(*author_name*) ((*author_post_count*))</a>
-                            </li>
-
-                        </view:authors>
-
-
-                    </ul>
-
-                </div>
-            </box:authors>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <box:categories>
-
-                <div class="sidebar-list">
-
-                    <h2>دسته بندی مطالب</h2>
-
-                    <ul>
-
-
-                        <view:categories>
-
-                            <li class="(*category_selected*)">
-                                <a href="(*category_link*)">(*category_name*) ((*category_post_count*))</a>
-                            </li>
-
-                            <check:if category_children>
-                                <ul id="children-category">
-                                    <view:category_children></view:category_children>
-
-
-                                </ul>
-
-
-
-
+                                </box:post_rating>
                             </check:if>
-
-
-
-                        </view:categories>
-
-
-                    </ul>
-
+                            <box:post_tags>
+                                <div class="post_tags">
+                                    <view:post_tags>
+                                        <a href="(*tag_link*)">#(*tag_name*)</a>
+                                    </view:post_tags>
+                                </div>
+                            </box:post_tags>
+                        </div>
+                    </div>
                 </div>
+                <check:if post_has_comments_section>
+                    <div class="comments-section-title">
+                        <a name="comments"></a>
+                        <a href="(*post_link*)#comment_form">نظرات ((*post_comment_count*))</a>
+                    </div>
+                    <box:post_comments>
+                        <div class="comments">
+                            <view:post_comments>
+                                <div class="one-comment">
+                                    <a name="comment-(*comment_id*)"></a>
+                                    <div class="avatar-and-name">
+                                        <img src="(*comment_avatar*)">
+                                        <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> | <a
+                                                href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M
+                                                %p"*)</a>
+                                        </h3>
+                                    </div>
+                                    <div class="comment-body">
+                                        <span>(*comment_body*)</span>
+                                    </div>
+                                    <check:if comment_reply>
+                                        <div class="comment-reply">
+                                            <div class="comment-raply-avatar">
+                                                <img src="(*comment_reply_avatar*)">
+                                            </div>
+                                            <div class="comment-reply-body">
+                                                <span>(*comment_reply*)</span>
+                                            </div>
+                                        </div>
+                                    </check:if>
+                                </div>
+                            </view:post_comments>
+                        </div>
+                    </box:post_comments>
+                </check:if>
+                <check:if post_has_send_comment>
+                    <div class="comment-form">
+                        <a name="comment_form"></a>
+                        (*comment_add_form*)
+                    </div>
+                </check:if>
+            </div>
+        </box:post_detail>
 
-            </box:categories>
-
-
-
-
-
-
-
-
-            <box:archive>
-
-                <div class="sidebar-list">
-
-                    <h2>آرشیو</h2>
-                    <ul>
-
-
-                        <view:archive>
-
-                            <li class="(*archive_selected*)">
-                                <a href="(*link_url*)">(*link_name*) ((*link_count*))</a>
-                            </li>
-
-                        </view:archive>
-
-
-                    </ul>
-
+        <box:page_detail>
+            <div class="post-page">
+                <div class="post-page-content-section">
+                    <div class="other-than-image">
+                        <div class="post-icon">
+                            <i class="ri-file-text-line"></i>
+                        </div>
+                        <div class="other-than-icon">
+                            <div class="iconandtitle">
+                                <h1> <a href="(*page_link*)">(*page_title*)</a> </h1>
+                            </div>
+                            <div class="text-content">
+                                (*page_content*)
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </box:archive>
-
-
-
-
-
-
-
-
-
-
-
-            <box:tag_cloud>
-
-                <div class="sidebar-list">
-
-                    <h2>ابر کلمات کلیدی</h2>
-                    <ul>
-
-
-                        <view:tag_cloud>
-
-                            <li style="font-size:(*tag_size*)%" class="(*tag_selected*)">
-                                <a href="(*tag_link*)">(*tag_name*) ((*tag_post_count*))</a>
-                            </li>
-
-                        </view:tag_cloud>
-
-
-                    </ul>
-
-                </div>
-            </box:tag_cloud>
-
-
-
-
-
-
-
-
-            <box:links>
-
-                <div class="sidebar-list">
-
-                    <h2>پیوند ها</h2>
-                    <ul>
-
-
-                        <view:links>
-
-                            <li>
-                                <a href="(*link_url*)" alt="(*link_alt*)" target="_blank">(*link_name*)</a>
-                            </li>
-
-                        </view:links>
-
-
-                    </ul>
-
-                </div>
-            </box:links>
-
-
-
-
-
-
-
-
-
-            <box:daily_links>
-
-                <div class="sidebar-list">
-
-                    <h2>پیوند های روزانه</h2>
-                    <ul>
-
-
-                        <view:daily_links>
-
-                            <li>
-                                <a href="(*link_url*)" alt="(*link_alt*)" target="_blank">(*link_name*)</a>
-                            </li>
-
-                        </view:daily_links>
-
-
-                    </ul>
-
-                </div>
-            </box:daily_links>
-
-
-
-
-
-
-
-
-
-            <box:stat>
-
-                <div class="sidebar-list">
-
-                    <h2>خلاصه آمار</h2>
-
-                    <ul>
-
-
-                        <view:stat>
-
-                            <li>
-                                (*stat_title*): (*stat_value*)
-                            </li>
-
-                        </view:stat>
-
-
-                    </ul>
-
-                </div>
-
-            </box:stat>
-
-
-
-
-
-
-            <box:ads>
-
-                <div id="ads">
-
-                    <h2>تبلیغات</h2>
-
-                    <view:ads>
-
-                        (*ad*)
-
-                    </view:ads>
-
-
-                </div>
-            </box:ads>
-
-
-
-
-
-        </div>
+                <check:if page_has_comments_section>
+                    <div class="comments-section-title">
+                        <a name="comments"></a>
+                        <a href="(*page_link*)#comment_form">نظرات ((*page_comment_count*))</a>
+                    </div>
+                    <box:page_comments>
+                        <div class="comments">
+                            <view:page_comments>
+                                <div class="one-comment">
+                                    <a name="comment-(*comment_id*)"></a>
+                                    <div class="avatar-and-name">
+                                        <img src="(*comment_avatar*)">
+                                        <h3><a href="(*comment_website*)" target="_blank">(*comment_fullname*)</a> |
+                                        </h3>
+                                        <h3><a href="(*comment_link*)">(*comment_date format="%A %e %B %Y - ساعت %I:%M
+                                                %p"*)</a></h3>
+                                    </div>
+                                    <div class="comment-body">
+                                        <span>(*comment_body*)</span>
+                                    </div>
+                                    <check:if comment_reply>
+                                        <div class="comment-reply">
+                                            <div class="comment-raply-avatar">
+                                                <img src="(*comment_reply_avatar*)">
+                                            </div>
+                                            <div class="comment-reply-body">
+                                                <span>(*comment_reply*)</span>
+                                            </div>
+                                        </div>
+                                    </check:if>
+                                </div>
+                            </view:page_comments>
+                        </div>
+                    </box:page_comments>
+                </check:if>
+                <check:if page_has_send_comment>
+                    <div class="comment-form">
+                        <a name="comment_form"></a>
+                        (*comment_add_form*)
+                    </div>
+                </check:if>
+            </div>
+        </box:page_detail>
 
     </div>
 
-
-
+    <div id="sidebar">
+        <box:menu>
+            <div id="menu">
+                <ul>
+                    <view:menu>
+                        <li class="(*menu_item_selected*)">
+                            <a href="(*menu_item_link*)">(*menu_item_title*)</a>
+                        </li>
+                    </view:menu>
+                </ul>
+            </div>
+        </box:menu>
+        <box:blog_info>
+            <div id="info">
+                (*search_form*)
+                <check:if blog_image>
+                    <div id="blog-image">
+                        <img src="(*blog_image*)">
+                    </div>
+                </check:if>
+                <check:if blog_description>
+                    <div id="blog-descripstion">
+                        (*blog_description*)
+                    </div>
+                </check:if>
+                (*follow_box*)
+            </div>
+        </box:blog_info>
+        <box:recent_posts>
+            <div class="sidebar-list">
+                <h2>آخرین مطالب</h2>
+                <ul>
+                    <view:recent_posts>
+                        <li>
+                            <a href="(*post_link*)">(*post_title*)</a>
+                        </li>
+                    </view:recent_posts>
+                </ul>
+            </div>
+        </box:recent_posts>
+        <box:popular_posts>
+            <div class="sidebar-list">
+                <h2>مطالب محبوب</h2>
+                <ul>
+                    <view:popular_posts>
+                        <li>
+                            <a href="(*post_link*)">(*post_title*)
+                                <box:post_rating>
+                                    <b>((*up_rates*) رای)</b>
+                                </box:post_rating>
+                                <check:if not post_rating>
+                                    <b>(بدون رای گیری)</b>
+                                </check:if>
+                            </a>
+                        </li>
+                    </view:popular_posts>
+                </ul>
+            </div>
+        </box:popular_posts>
+        <box:most_commented_posts>
+            <div class="sidebar-list">
+                <h2>مطالب پر بحث</h2>
+                <ul>
+                    <view:most_commented_posts>
+                        <li>
+                            <a href="(*post_link*)">(*post_title*)
+                                <check:if post_has_comments_section>
+                                    <b>((*post_comment_count*) نظر) </b>
+                                </check:if>
+                                <check:if not post_has_comments_section>
+                                    <b>(فاقد نظرات عمومی)</b>
+                                </check:if>
+                            </a>
+                        </li>
+                    </view:most_commented_posts>
+                </ul>
+            </div>
+        </box:most_commented_posts>
+        <box:most_visited_posts>
+            <div class="sidebar-list">
+                <h2>مطالب پر بازدید</h2>
+                <ul>
+                    <view:most_visited_posts>
+                        <li>
+                            <a href="(*post_link*)">(*post_title*) <b>((*post_visits*) بازدید)</b></a>
+                        </li>
+                    </view:most_visited_posts>
+                </ul>
+            </div>
+        </box:most_visited_posts>
+        <box:recent_comments>
+            <div class="sidebar-list">
+                <h2>نظرات اخیر</h2>
+                <ul>
+                    <view:recent_comments>
+                        <li id="comment-profile">
+                            <a href="(*comment_link*)"> <img src="(*comment_avatar*)"> (*comment_body_text
+                                max="35"*)</a>
+                        </li>
+                    </view:recent_comments>
+                </ul>
+            </div>
+        </box:recent_comments>
+        <box:authors>
+            <div class="sidebar-list">
+                <h2>نویسندگان</h2>
+                <ul>
+                    <view:authors>
+                        <li class="(*author_selected*)">
+                            <a href="(*author_link*)">(*author_name*) ((*author_post_count*))</a>
+                        </li>
+                    </view:authors>
+                </ul>
+            </div>
+        </box:authors>
+        <box:categories>
+            <div class="sidebar-list">
+                <h2>دسته بندی مطالب</h2>
+                <ul>
+                    <view:categories>
+                        <li class="(*category_selected*)">
+                            <a href="(*category_link*)">(*category_name*) ((*category_post_count*))</a>
+                        </li>
+                        <check:if category_children>
+                            <ul id="children-category">
+                                <view:category_children></view:category_children>
+                            </ul>
+                        </check:if>
+                    </view:categories>
+                </ul>
+            </div>
+        </box:categories>
+        <box:archive>
+            <div class="sidebar-list">
+                <h2>آرشیو</h2>
+                <ul>
+                    <view:archive>
+                        <li class="(*archive_selected*)">
+                            <a href="(*link_url*)">(*link_name*) ((*link_count*))</a>
+                        </li>
+                    </view:archive>
+                </ul>
+            </div>
+        </box:archive>
+        <box:tag_cloud>
+            <div class="sidebar-list">
+                <h2>ابر کلمات کلیدی</h2>
+                <ul>
+                    <view:tag_cloud>
+                        <li style="font-size:(*tag_size*)%" class="(*tag_selected*)">
+                            <a href="(*tag_link*)">(*tag_name*) ((*tag_post_count*))</a>
+                        </li>
+                    </view:tag_cloud>
+                </ul>
+            </div>
+        </box:tag_cloud>
+        <box:links>
+            <div class="sidebar-list">
+                <h2>پیوند ها</h2>
+                <ul>
+                    <view:links>
+                        <li>
+                            <a href="(*link_url*)" alt="(*link_alt*)" target="_blank">(*link_name*)</a>
+                        </li>
+                    </view:links>
+                </ul>
+            </div>
+        </box:links>
+        <box:daily_links>
+            <div class="sidebar-list">
+                <h2>پیوند های روزانه</h2>
+                <ul>
+                    <view:daily_links>
+                        <li>
+                            <a href="(*link_url*)" alt="(*link_alt*)" target="_blank">(*link_name*)</a>
+                        </li>
+                    </view:daily_links>
+                </ul>
+            </div>
+        </box:daily_links>
+        <box:stat>
+            <div class="sidebar-list">
+                <h2>خلاصه آمار</h2>
+                <ul>
+                    <view:stat>
+                        <li>
+                            (*stat_title*): (*stat_value*)
+                        </li>
+                    </view:stat>
+                </ul>
+            </div>
+        </box:stat>
+        <box:ads>
+            <div id="ads">
+                <h2>تبلیغات</h2>
+                <view:ads>
+                    (*ad*)
+                </view:ads>
+            </div>
+        </box:ads>
+    </div>
+    </div>
 
     <div id="footer">
-
         (*copyright_notice*) | طراح: <a href="https://pikhosh.blog.ir" target="blank" title="وبلاگ طراح قالب">پیخوش</a>
-
     </div>
-
-
-
-
-
 
 </body>
 
