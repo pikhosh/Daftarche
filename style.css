@@ -4,9 +4,9 @@ code {
 }
 
 :root {
-  --Main-Color: #fff2e4;
+  --Primary-Color: #fff2e4;
   --Secondary-Color: #fff8f8;
-  --Third-Color: #ffffff;
+  --Tertiary-Color: #ffffff;
 
   --SelectedBGColor: #faebd7;
   --TextColor: #707070;
@@ -28,7 +28,7 @@ code {
 }
 
 body {
-  background: var(--Main-Color);
+  background: var(--Primary-Color);
   font-family: var(--Font);
 }
 
@@ -237,7 +237,7 @@ a.btn:visited {
 }
 
 .comment-form {
-  background: var(--Third-Color);
+  background: var(--Tertiary-Color);
   border-radius: var(--BorderRadius);
   padding: 10px;
 }
@@ -245,7 +245,7 @@ a.btn:visited {
 /*End*/
 
 .post-page-content-section {
-  background: var(--Third-Color);
+  background: var(--Tertiary-Color);
   border-radius: 30px;
   margin-bottom: 25px;
 }
@@ -272,7 +272,7 @@ a.btn:visited {
 }
 
 .one-comment {
-  background: var(--Third-Color);
+  background: var(--Tertiary-Color);
   border-radius: var(--BorderRadius);
   padding: 15px;
   margin-bottom: 30px;
@@ -310,7 +310,7 @@ a.btn:visited {
 }
 
 #sidebar {
-  background: var(--Main-Color);
+  background: var(--Primary-Color);
   border-top: dashed 1px;
   border-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2370707080' stroke-width='4' stroke-dasharray='9%2c 9' stroke-dashoffset='9' stroke-linecap='butt'/%3e%3c/svg%3e") 1 round;
   border-radius: 0 0 30px 30px;
@@ -367,7 +367,7 @@ a.btn:visited {
 
 .pagination-button,
 #page-numbers a {
-  background-color: var(--Third-Color);
+  background-color: var(--Tertiary-Color);
   border-radius: var(--BorderRadius);
   padding: 5px;
 }
@@ -399,9 +399,9 @@ select {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --Main-Color: #4d4944;
+    --Primary-Color: #4d4944;
     --Secondary-Color: #4d4a4a;
-    --Third-Color: #4d4d4d;
+    --Tertiary-Color: #4d4d4d;
 
     --TextColor: #ffffffde;
     --MainBoxShadowColor: #00000080;
