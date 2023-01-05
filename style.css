@@ -4,28 +4,31 @@ code {
 }
 
 :root {
-  --Font: Sahel, sans-serif;
-  --BorderRadius: 30px;
-  --CommentFormBGColor: white;
-  --MainBGColor: #fff2e4;
-  --MainBoxColor: #fff8f8;
-  --SideBarColor: #fff2e4;
-  --PostBoxColor: white;
-  --TextColor: #707070;
-  --MainBoxShadowColor: #707070;
-  --PaginationBGColor: #ffffff;
-  --CommentBGColor: white;
+  --Main-Color: #fff2e4;
+  --Secondary-Color: #fff8f8;
+  --Third-Color: #ffffff;
+
   --SelectedBGColor: #faebd7;
+  --TextColor: #707070;
+
   --CommentFormFocusOutlineColor: #ededed;
-  --SideBarCommentAvatarSize: 35px;
-  --SideBarTitleShodow: inset 0 3px 6px -5px;
   --MainBorderColor: #707070;
   --SideBorderColor: #70707033;
+
+  --Font: Sahel, sans-serif;
+
+  --BorderRadius: 30px;
+
+  --SideBarCommentAvatarSize: 35px;
+
+  --MainBoxShadowColor: #707070;
+  --SideBarTitleShodow: inset 0 3px 6px -5px;
+
   --SearchBGImage: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='18' height='18'%3E%3Cpath fill='none' d='M0 0h24v24H0z'/%3E%3Cpath d='M18.031 16.617l4.283 4.282-1.415 1.415-4.282-4.283A8.96 8.96 0 0 1 11 20c-4.968 0-9-4.032-9-9s4.032-9 9-9 9 4.032 9 9a8.96 8.96 0 0 1-1.969 5.617zm-2.006-.742A6.977 6.977 0 0 0 18 11c0-3.868-3.133-7-7-7-3.868 0-7 3.132-7 7 0 3.867 3.132 7 7 7a6.977 6.977 0 0 0 4.875-1.975l.15-.15z' fill='rgba(112,112,112,1)'/%3E%3C/svg%3E");
 }
 
 body {
-  background: var(--MainBGColor);
+  background: var(--Main-Color);
   font-family: var(--Font);
 }
 
@@ -72,7 +75,7 @@ h1 {
 }
 
 #main-box {
-  background: var(--MainBoxColor);
+  background: var(--Secondary-Color);
   border-radius: 30px;
   box-shadow: 0px 3px 99px -35px var(--MainBoxShadowColor);
   margin: 15px;
@@ -107,7 +110,7 @@ pre.prettyprint {
 }
 
 pre {
-  background-color: var(--MainBoxColor);
+  background-color: var(--Secondary-Color);
 }
 
 .bComForm .sendbutton.hasCheckbox,
@@ -119,7 +122,7 @@ pre {
 }
 
 input[type="submit"] {
-  background: var(--MainBoxColor);
+  background: var(--Secondary-Color);
   color: var(--TextColor);
 }
 
@@ -228,13 +231,13 @@ a.btn:visited {
 }
 
 .comment-form input {
-  background: var(--MainBoxColor);
+  background: var(--Secondary-Color);
   border-radius: var(--BorderRadius);
   padding: 0 10px 0 10px;
 }
 
 .comment-form {
-  background: var(--CommentFormBGColor);
+  background: var(--Third-Color);
   border-radius: var(--BorderRadius);
   padding: 10px;
 }
@@ -242,7 +245,7 @@ a.btn:visited {
 /*End*/
 
 .post-page-content-section {
-  background: var(--PostBoxColor);
+  background: var(--Third-Color);
   border-radius: 30px;
   margin-bottom: 25px;
 }
@@ -269,7 +272,7 @@ a.btn:visited {
 }
 
 .one-comment {
-  background: var(--CommentBGColor);
+  background: var(--Third-Color);
   border-radius: var(--BorderRadius);
   padding: 15px;
   margin-bottom: 30px;
@@ -283,7 +286,7 @@ a.btn:visited {
 }
 
 .comment-reply-body {
-  background: var(--MainBoxColor);
+  background: var(--Secondary-Color);
   border-radius: var(--BorderRadius);
   padding: 15px;
   width: -webkit-fill-available;
@@ -307,7 +310,7 @@ a.btn:visited {
 }
 
 #sidebar {
-  background: var(--SideBarColor);
+  background: var(--Main-Color);
   border-top: dashed 1px;
   border-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%2370707080' stroke-width='4' stroke-dasharray='9%2c 9' stroke-dashoffset='9' stroke-linecap='butt'/%3e%3c/svg%3e") 1 round;
   border-radius: 0 0 30px 30px;
@@ -364,7 +367,7 @@ a.btn:visited {
 
 .pagination-button,
 #page-numbers a {
-  background-color: var(--PaginationBGColor);
+  background-color: var(--Third-Color);
   border-radius: var(--BorderRadius);
   padding: 5px;
 }
@@ -396,16 +399,13 @@ select {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --MainBGColor: #4d4944;
-    --MainBoxColor: #4d4a4a;
-    --SideBarColor: #4d4944;
-    --PostBoxColor: #4d4d4d;
+    --Main-Color: #4d4944;
+    --Secondary-Color: #4d4a4a;
+    --Third-Color: #4d4d4d;
+
     --TextColor: #ffffffde;
     --MainBoxShadowColor: #00000080;
-    --PaginationBGColor: #4d4d4d;
     --SideBarTitleShodow: inset 0 3px 6px -5px #00000080;
-    --CommentBGColor: #4d4d4d;
-    --CommentFormBGColor: #4d4d4d;
     --SelectedBGColor: #48433d;
     --CommentFormFocusOutlineColor: #606060;
   }
