@@ -52,6 +52,7 @@ h4 {
   font-size: 15px;
   text-align: center;
   margin: 0 20px 0 20px;
+  gap: 0.5rem;
 }
 
 h1 {
@@ -436,7 +437,6 @@ select {
 
 #rss-icon {
   text-decoration: none;
-  margin-left: 5px;
 }
 
 .first-and-last:not(:first-child) {
