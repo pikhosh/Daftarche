@@ -108,6 +108,7 @@ pre.prettyprint {
   border: none;
   border-radius: var(--BorderRadius);
   padding: 5px;
+  max-width: 60vw;
 }
 
 pre {
