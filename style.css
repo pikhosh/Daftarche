@@ -104,6 +104,15 @@ img:not(#ads img) {
 
 /* Code For Modify Bayan.ir Default Styles*/
 
+textarea {
+  background-color: var(--Secondary-Color);
+}
+
+select {
+  background-color: var(--Secondary-Color);
+  color: var(--TextColor);
+}
+
 pre.prettyprint {
   border: none;
   border-radius: var(--BorderRadius);
@@ -121,6 +130,7 @@ pre {
   padding: 5px 0;
   width: -webkit-fill-available;
   width: -moz-available;
+  border-width: 1px;
 }
 
 input[type="submit"] {
