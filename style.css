@@ -271,6 +271,11 @@ a.btn:visited {
 
 .post-page {
   padding: 15px 15px 15px 15px;
+  overflow-wrap: anywhere;
+}
+
+.text-content div {
+  margin-block-start: 1rem;
 }
 
 .one-comment {
