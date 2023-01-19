@@ -131,6 +131,8 @@ pre {
   width: -webkit-fill-available;
   width: -moz-available;
   border-width: 1px;
+  border-color: #767676;
+  border-style: solid;
 }
 
 input[type="submit"] {
