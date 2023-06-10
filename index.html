@@ -171,7 +171,7 @@
 
         <box:post_detail>
             <div class="post-page">
-                <div class="post-page-content-section">
+                <div id="post-detail-content-box" class="post-page-content-section">
                     <check:if post_image>
                         <div class="thumbnail">
                             <img src="(*post_image*)">
@@ -234,32 +234,53 @@
                                 <box:post_rating>
                                     <div class="likeanddis">
                                         <check:if user_rated_down>
-                                            (*down_rates*)<a href="(*rate_down_link*)"><i
-                                                    class="ri-thumb-down-fill"></i></a>
+                                            <a class="clickable" href="(*rate_down_link*)">
+                                                <i class="ri-thumb-down-fill">
+                                                </i>
+                                                (*down_rates*)
+                                            </a>
                                         </check:if>
+
                                         <check:if not user_rated_down>
-                                            (*down_rates*)<a href="(*rate_down_link*)"><i
-                                                    class="ri-thumb-down-line"></i></a>
+                                            <a class="clickable" href="(*rate_down_link*)">
+                                                <i class="ri-thumb-down-line">
+                                                </i>
+                                                (*down_rates*)
+                                            </a>
                                         </check:if>
+
                                         <check:if user_rated_up>
-                                            (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-fill"></i></a>
+                                            <a class="clickable" href="(*rate_up_link*)">
+                                                <i class="ri-thumb-up-fill">
+                                                </i>
+                                                (*up_rates*)
+                                            </a>
                                         </check:if>
+
                                         <check:if not user_rated_up>
-                                            (*up_rates*)<a href="(*rate_up_link*)"><i class="ri-thumb-up-line"></i></a>
+                                            <a class="clickable" href="(*rate_up_link*)">
+                                                <i class="ri-thumb-up-line">
+                                                </i>
+                                                (*up_rates*)
+                                            </a>
                                         </check:if>
                                     </div>
                                 </box:post_rating>
                             </check:if>
-                            <box:post_tags>
-                                <div class="post_tags">
-                                    <view:post_tags>
-                                        <a href="(*tag_link*)">#(*tag_name*)</a>
-                                    </view:post_tags>
-                                </div>
-                            </box:post_tags>
+                            
                         </div>
                     </div>
                 </div>
+
+                <!-- Post Tags - کلمات کلیدی مطلب -->
+                <box:post_tags>
+                    <div class="post_tags">
+                        <view:post_tags>
+                            <a href="(*tag_link*)">#(*tag_name*)</a>
+                        </view:post_tags>
+                    </div>
+                </box:post_tags>
+
                 <check:if post_has_comments_section>
                     <div class="comments-section-title">
                         <a name="comments"></a>

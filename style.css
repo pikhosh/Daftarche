@@ -511,6 +511,38 @@ select {
   margin-left: 5px;
 }
 
+.likeanddis {
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+}
+
+.clickable {
+  background: var(--Secondary-Color);
+  padding: 0.3rem 1rem;
+  border-radius: var(--BorderRadius);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+.clickable:hover {
+  padding: 0.3rem 1.5rem;
+}
+
+.post_tags {
+  background: var(--Primary-Color);
+  border-radius: 0 0 30px 30px;
+  margin-bottom: 25px;
+  padding: 1rem;
+}
+
+#post-detail-content-box {
+  background: var(--Tertiary-Color);
+  border-radius: 30px 30px 0 0;
+  margin-bottom: 0;
+}
+
 /* Desktop Version */
 
 @media (min-width: 1200px) {
