@@ -233,21 +233,6 @@
                             <check:if post_rating>
                                 <box:post_rating>
                                     <div class="likeanddis">
-                                        <check:if user_rated_down>
-                                            <a class="clickable" href="(*rate_down_link*)">
-                                                <i class="ri-thumb-down-fill">
-                                                </i>
-                                                (*down_rates*)
-                                            </a>
-                                        </check:if>
-
-                                        <check:if not user_rated_down>
-                                            <a class="clickable" href="(*rate_down_link*)">
-                                                <i class="ri-thumb-down-line">
-                                                </i>
-                                                (*down_rates*)
-                                            </a>
-                                        </check:if>
 
                                         <check:if user_rated_up>
                                             <a class="clickable" href="(*rate_up_link*)">
@@ -264,6 +249,24 @@
                                                 (*up_rates*)
                                             </a>
                                         </check:if>
+                                        
+
+                                        <check:if user_rated_down>
+                                            <a class="clickable" href="(*rate_down_link*)">
+                                                <i class="ri-thumb-down-fill">
+                                                </i>
+                                                (*down_rates*)
+                                            </a>
+                                        </check:if>
+
+                                        <check:if not user_rated_down>
+                                            <a class="clickable" href="(*rate_down_link*)">
+                                                <i class="ri-thumb-down-line">
+                                                </i>
+                                                (*down_rates*)
+                                            </a>
+                                        </check:if>
+
                                     </div>
                                 </box:post_rating>
                             </check:if>
