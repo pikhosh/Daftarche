@@ -291,7 +291,7 @@ a.btn:visited {
 
 .other-than-icon {
   padding: 0 0 25px 25px;
-  width: --webkit-fill-available;
+  width: -webkit-fill-available;
 }
 
 .thumbnail {
