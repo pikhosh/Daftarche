@@ -433,9 +433,9 @@ select {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --Primary-Color: #4d4944;
-    --Secondary-Color: #4d4a4a;
-    --Tertiary-Color: #4d4d4d;
+    --Primary-Color: #2c2c2c;
+    --Secondary-Color: #323438;
+    --Tertiary-Color: #292a2e;
 
     --TextColor: #ffffffde;
     --MainBoxShadowColor: #00000080;
