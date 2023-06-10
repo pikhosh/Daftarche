@@ -8,6 +8,8 @@ code {
   --Secondary-Color: #fff8f8;
   --Tertiary-Color: #ffffff;
 
+  --Post-Tags-Section-Color: hsl(0deg 0% 95%);
+
   --SelectedBGColor: #faebd7;
   --TextColor: #707070;
 
@@ -437,6 +439,8 @@ select {
     --Secondary-Color: #323438;
     --Tertiary-Color: #292a2e;
 
+    --Post-Tags-Section-Color: hsl(228 6% 16% / 1);
+
     --TextColor: #ffffffde;
     --MainBoxShadowColor: #00000080;
     --SideBarTitleShodow: inset 0 3px 6px -5px #00000080;
@@ -531,7 +535,7 @@ select {
 }
 
 .post_tags {
-  background: var(--Primary-Color);
+  background: var(--Post-Tags-Section-Color);
   border-radius: 0 0 30px 30px;
   margin-bottom: 25px;
   padding: 1rem;
