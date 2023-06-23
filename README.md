@@ -1,7 +1,7 @@
 # قالب وبلاگی دفترچه برای بیان بلاگ
+![image](https://github.com/pikhosh/Daftarche/assets/73311467/4322d841-5501-4653-afe1-074464b77585)
+![image](https://github.com/pikhosh/Daftarche/assets/73311467/4bf3f5fd-dca3-41c1-9165-4f645906cce4)
 
-![image](https://user-images.githubusercontent.com/73311467/154791394-ade77cf7-81c1-4103-95ae-3aa3922062d4.png)
-![image](https://user-images.githubusercontent.com/73311467/154791399-ff89d206-149f-47c4-b868-02425ddcd28b.png)
 
 
 در تلاش برای ساخت یه قالب خوشگل برای وبلاگ نویس های خوشگل! 😂👌
