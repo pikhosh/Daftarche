@@ -276,10 +276,6 @@ a.btn:visited {
   background-position: center;
 }
 
-.search-box ::placeholder {
-  color: var(--TextColor);
-}
-
 .search-box,
 .search-box.dark,
 .search-box.light,
