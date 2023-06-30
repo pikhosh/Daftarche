@@ -175,6 +175,11 @@ img:not(#ads img) {
 /* ================================================== */
 /* Code For Modify Bayan.ir Default Styles*/
 
+audio {
+  width: 100%;
+  max-width: 20rem;
+}
+
 textarea {
   background-color: var(--Secondary-Color);
 }
