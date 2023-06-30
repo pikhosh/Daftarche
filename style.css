@@ -264,6 +264,11 @@ a.btn:visited {
   border-radius: 10px;
 }
 
+input.text {
+  border-style: solid;
+  border-width: 1px;
+}
+
 /* -------------------------------------------------- */
 /* Search Box */
 
