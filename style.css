@@ -180,6 +180,10 @@ audio {
   max-width: 20rem;
 }
 
+.first-flex:has(audio) {
+  width: 100%;
+}
+
 textarea {
   background-color: var(--Secondary-Color);
 }
