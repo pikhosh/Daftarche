@@ -676,6 +676,7 @@ span.post-page-info-content {
   padding: 0.1rem 0.5rem;
   border-radius: 0.5rem 0 0 0.5rem;
   display: flex;
+  flex-wrap: wrap;
 }
 
 span.post-page-info-content > a {
