@@ -322,6 +322,10 @@ div.inputFix input.text {
   border-radius: 15px;
 }
 
+#followThis {
+  border-radius: var(--BorderRadius);
+}
+
 #followInBx a {
   text-decoration: revert;
 }
