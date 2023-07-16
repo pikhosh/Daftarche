@@ -190,7 +190,6 @@ textarea {
 
 select {
   background-color: var(--Secondary-Color);
-  color: var(--TextColor);
 }
 
 pre.prettyprint {
@@ -510,6 +509,7 @@ textarea,
 input,
 select {
   font-family: var(--Font);
+  color: var(--TextColor);
 }
 
 #sidebar {
